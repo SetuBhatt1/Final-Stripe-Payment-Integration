@@ -3,25 +3,13 @@
   "builds": [
     {
       "src": "server.js",
-<<<<<<< HEAD
       "use": "@vercel/node"
-=======
-      "use": "@now/node"
->>>>>>> 9c9da1d9b27b31cb1cd89b743d64e787471feed5
     }
   ],
   "routes": [
     {
-<<<<<<< HEAD
       "src": "/api/checkout",
       "dest": "server.js"
     }
   ]
 }
-=======
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
-}
->>>>>>> 9c9da1d9b27b31cb1cd89b743d64e787471feed5
