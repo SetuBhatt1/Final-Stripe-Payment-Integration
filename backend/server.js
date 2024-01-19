@@ -46,3 +46,4 @@ app.post("/checkout", async (req, res) => {
 });
 
 app.listen(process.env.PORT, () => console.log("Server listening on port"));
+module.exports = app
