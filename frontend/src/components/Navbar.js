@@ -10,7 +10,7 @@ function NavbarComponent() {
 
     const handleCheckout = async () => {
         try {
-            const response = await fetch('https://final-stripe-payment-integration-geym.vercel.app/checkout', {
+            const response = await fetch('http://localhost:4000/checkout', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
