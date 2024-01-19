@@ -23,7 +23,7 @@ const prodArray = [
 function getProductById(id){
     let prodData = prodArray.find(product => product.id===id);
 
-    if(prodData == undefined){
+    if(prodData === undefined){
         console.log("product does not exist for id: "+id);
         return undefined;
     }
