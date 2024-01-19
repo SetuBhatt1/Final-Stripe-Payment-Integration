@@ -10,7 +10,7 @@ function NavbarComponent() {
 
     const handleCheckout = async () => {
         try {
-            const response = await fetch('http://localhost:4000/checkout', {
+            const response = await fetch('  https://d46d-43-249-234-141.ngrok-free.app/checkout', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
