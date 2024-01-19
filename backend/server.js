@@ -5,18 +5,18 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://final-stripe-payment-integration.vercel.app');
+    next();
+});
+
 app.use(cors({
     origin: '*',
-    methods: 'POST',
-    credentials: true
+    methods: 'GET,POST',
 }));
 
 app.use(express.static("public"));
 app.use(express.json());
-
-app.get("/",(req,res)=>{
-    res.json("hello");
-})
 
 app.post("/checkout", async (req, res) => {
     const items = req.body.items;
