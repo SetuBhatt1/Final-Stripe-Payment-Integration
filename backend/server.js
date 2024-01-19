@@ -4,6 +4,12 @@ require('dotenv').config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://final-stripe-payment-integration.vercel.app');
+    next();
+});
+
 app.use(cors({
     origin: '*',
     methods: 'GET,POST',
