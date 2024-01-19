@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/checkout",
@@ -17,8 +11,7 @@
       "source": "/checkout",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "https://final-stripe-payment-integration.vercel.app" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET,POST" },
-        { "key": "Access-Control-Allow-Headers", "value": "*" }
+        { "key": "Access-Control-Allow-Methods", "value": "GET,POST" }
       ]
     }
   ]
